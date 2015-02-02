@@ -64,9 +64,12 @@ Use in controller method.
 ```java
 @RequestMapping(value="/action")
 public String handleRequest(ExampleCookie myCookie){
-    String cookieValue = myCookie.getValue()
-    //etc
+    //read
+    String cookieValue = myCookie.getValue();
+    
+    //write
+    myCookie.setValue("abc123");
 } 
 ```
 
-*Ideally Cookie would be immutable, needs refinement.
+*In the spirit of functional programming Cookie would be immutable, needs refinement.

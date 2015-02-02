@@ -6,7 +6,7 @@ public abstract class BaseCookie<T> {
   private final String domain;
   private final int maxAge;
   private final String path;
-  private final T value;
+  private T value;
 
   protected BaseCookie(String name, String domain, int maxAge, String path, T value) {
     this.name = name;
@@ -34,5 +34,9 @@ public abstract class BaseCookie<T> {
 
   public T getValue() {
     return value;
+  }
+
+  public void setValue(T value) {
+    this.value = value;
   }
 }
