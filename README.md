@@ -5,7 +5,6 @@ Simple framework for making cookies easier to use in Spring MVC, effectively 'st
 The reading and writing* of your cookies is taken care of in the framework. You just express them as a parameter to a controller method.
 
 1. Create Cookie (extends from BaseCookie) and define its value type. Simplest example is storing a string in the cookie.
-
 ```java
 public class ExampleStringCookie extends BaseCookie<String> {
 
@@ -14,9 +13,7 @@ public class ExampleStringCookie extends BaseCookie<String> {
   }
 }
 ```
-
 2. Create Cookie Cutter (extend from CookieCutter).
-
 ```java
 public class ExampleCookieCutter extends CookieCutter<ExampleStringCookie> {
 
@@ -42,11 +39,8 @@ public class ExampleCookieCutter extends CookieCutter<ExampleStringCookie> {
   }
 }
 ```
-
 3. Register CookieCutter with Spring context (will autowire into CookieHandlerInterceptor)
-
 4. WebArgumentResolver for Cookie, ensures your Cookie is available as a parameter in controller.
-
 ```java
 public class ExampleCookieArgumentResolver implements WebArgumentResolver {
 
@@ -58,9 +52,7 @@ public class ExampleCookieArgumentResolver implements WebArgumentResolver {
   }
 }
 ```
-
 5. Use in controller method.
-
 ```java
 @RequestMapping(value="/action")
 public String handleRequest(ExampleCookie myCookie){
