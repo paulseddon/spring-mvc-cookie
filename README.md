@@ -2,7 +2,7 @@
 
 Simple framework for making cookies easier to use in Spring MVC, effectively 'strongly typing' them to be used in your controllers. Serves as an alternative to @CookieValue.
 
-The reading and writing* of your cookies is taken care of in the framework. You just express them as a parameter to a controller method.
+The reading and writing of your cookies is taken care of in the framework. You just express them as a parameter to a controller method.
 
 Create Cookie (extends from BaseCookie) and define its value type. Simplest example is storing a string in the cookie.
 
@@ -72,5 +72,8 @@ public String handleRequest(ExampleCookie myCookie){
 } 
 ```
 
-*In the spirit of functional programming Cookie would be immutable, needs refinement.
-**Need tests.
+TODO:
+
+-In the spirit of functional programming Cookie would be immutable, needs refinement.
+
+-Need tests.
