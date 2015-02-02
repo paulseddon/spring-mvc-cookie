@@ -4,8 +4,8 @@ import java.util.Map;
 
 public class MapCookie extends BaseCookie<Map<String, String>> {
 
-  protected MapCookie(String domain, int maxAge, String path, Map<String, String> value) {
-    super(domain, maxAge, path, value);
+  protected MapCookie(String name, String domain, int maxAge, String path, Map<String, String> value) {
+    super(name, domain, maxAge, path, value);
   }
 
   protected String get(String key) {

@@ -27,7 +27,7 @@ public class CookieHandlerInterceptor extends HandlerInterceptorAdapter {
         cookie = cookieCutter.cutNew();
       }
 
-      request.setAttribute(cookieCutter.getCookieName(), cookie);
+      request.setAttribute(cookie.getClass().getName(), cookie);
     }
 
     return true;

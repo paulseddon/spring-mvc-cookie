@@ -20,13 +20,13 @@ public class MapCookieCutter extends CookieCutter<MapCookie> {
 
   @Override
   protected MapCookie cutExisting(Cookie existingCookie) {
-    return new MapCookie(existingCookie.getDomain(), existingCookie.getMaxAge(), existingCookie.getPath(),
+    return new MapCookie(getCookieName(), existingCookie.getDomain(), existingCookie.getMaxAge(), existingCookie.getPath(),
       deserializeCookieMap(existingCookie.getValue()));
   }
 
   @Override
   protected MapCookie cutNew() {
-    return new MapCookie("com.mydomain", MAX_AGE_COOKIE, "/", Maps.newHashMap());
+    return new MapCookie(getCookieName(), "io.pase", MAX_AGE_COOKIE, "/", Maps.newHashMap());
   }
 
   @Override
