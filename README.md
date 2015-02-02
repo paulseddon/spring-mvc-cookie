@@ -73,3 +73,4 @@ public String handleRequest(ExampleCookie myCookie){
 ```
 
 *In the spirit of functional programming Cookie would be immutable, needs refinement.
+**Need tests.
