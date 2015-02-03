@@ -76,4 +76,6 @@ TODO:
 
 -In the spirit of functional programming Cookie would be immutable, needs refinement.
 
+- Avoid creation of WebArgumentResolver, do that in framework automatically.
+
 -Need tests.
